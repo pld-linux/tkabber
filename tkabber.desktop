@@ -7,5 +7,5 @@ Icon=tkabber.png
 Exec=tkabber
 Terminal=false
 Type=Application
-Categories=Network;X-Communication;
+Categories=Network;InstantMessaging;
 # vi: encoding=utf-8
