@@ -1,12 +1,12 @@
 Summary:	Tk Jabber client
 Summary(pl):	Klient Jabbera oparty o Tk
 Name:		tkabber
-Version:	0.9.4beta
+Version:	0.9.5beta
 Release:	1
 License:	GPL
 Group:		Applications/Communications
-# Source0-md5:	774eaf66e2b4b5a4e032d92f07c4a6cc
 Source0:	http://www.jabberstudio.org/projects/tkabber/releases/file/%{name}-%{version}.tar.gz
+# Source0-md5:	13c62b75d6c80ebbbff5eb3e9f2aa668
 Source1:	%{name}.desktop
 Source2:	%{name}.png
 Patch0:		%{name}-defaults.patch
