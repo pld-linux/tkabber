@@ -10,7 +10,7 @@ URL:		http://www.jabber.ru/projects/tkabber/index_en.html
 Requires:	tcl >= 8.3.4-7
 Requires:	tk >= 8.3.3
 Requires:	tcllib >= 1.2
-Requires:	BWidget >= 1.3
+Requires:	tk-BWidget >= 1.3
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -27,6 +27,13 @@ include:
 - browsing
 
 and many, many more.
+
+You may need additional packages for full funcionality:
+
+- tk-Img, for more image file formats support
+- tcl-tls, for encrypted connections to server
+- tclgpgme, for end-to-end message encryption and signing
+- tkXwin, for auto-away
 
 %prep
 %setup -q
