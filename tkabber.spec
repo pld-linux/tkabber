@@ -2,7 +2,7 @@ Summary:	Tk Jabber client
 Summary(pl):	Klient Jabbera oparty o Tk
 Name:		tkabber
 Version:	0.9.5beta
-Release:	1
+Release:	2
 License:	GPL
 Group:		Applications/Communications
 Source0:	http://www.jabberstudio.org/projects/tkabber/releases/file/%{name}-%{version}.tar.gz
@@ -10,6 +10,7 @@ Source0:	http://www.jabberstudio.org/projects/tkabber/releases/file/%{name}-%{ve
 Source1:	%{name}.desktop
 Source2:	%{name}.png
 Patch0:		%{name}-defaults.patch
+Patch1:		%{name}-session_request.patch
 Icon:		tkabber.xpm
 URL:		http://tkabber.jabber.ru/
 Requires:	tcl >= 8.3.4-7
@@ -58,6 +59,7 @@ Do pe³nej funkcjonalno¶ci mog± byæ potrzebne dodatkowe pakiety:
 %prep
 %setup -q
 %patch0 -p1
+%patch1 -p1
 
 %install
 rm -rf $RPM_BUILD_ROOT
