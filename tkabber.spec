@@ -6,6 +6,10 @@ Release:	1
 License:	GPL
 Group:		Applications/Communications
 Source0:	http://www.jabber.ru/projects/tkabber/tkabber-0.9beta/%{name}-%{version}.tar.gz
+Source1:	%{name}.desktop
+Source2:	%{name}.png
+Patch0:		%{name}-defaults.patch
+Icon:		tkabber.xpm
 URL:		http://www.jabber.ru/projects/tkabber/index_en.html
 Requires:	tcl >= 8.3.4-7
 Requires:	tk >= 8.3.3
@@ -37,14 +41,17 @@ You may need additional packages for full funcionality:
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT
+install -d $RPM_BUILD_ROOT{%{_applnkdir}/Network/Communications,%{_pixmapsdir}}
 
 %{__make} install PREFIX="%{_prefix}" DESTDIR="$RPM_BUILD_ROOT"
+install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Network/Communications
+install %{SOURCE2} $RPM_BUILD_ROOT%{_pixmapsdir}
 
 rm -rf $RPM_BUILD_ROOT%{_docdir}
 
@@ -56,3 +63,5 @@ rm -rf $RPM_BUILD_ROOT
 %doc ChangeLog AUTHORS README.html examples
 %attr(755,root,root) %{_bindir}/*
 %{_datadir}/%{name}
+%{_applnkdir}/Network/Communications/*.desktop
+%{_pixmapsdir}/*
