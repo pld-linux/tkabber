@@ -2,7 +2,7 @@ Summary:	Tk Jabber client
 Summary(pl):	Klient Jabbera oparty o Tk
 Name:		tkabber
 Version:	0.9.6beta
-Release:	1
+Release:	2
 License:	GPL
 Group:		Applications/Communications
 Source0:	http://www.jabberstudio.org/projects/tkabber/releases/file/%{name}-%{version}.tar.gz
@@ -61,10 +61,13 @@ Do pe³nej funkcjonalno¶ci mog± byæ potrzebne dodatkowe pakiety:
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT{%{_applnkdir}/Network/Communications,%{_pixmapsdir}}
+install -d $RPM_BUILD_ROOT{%{_desktopdir},%{_pixmapsdir}}
 
-%{__make} install PREFIX="%{_prefix}" DESTDIR="$RPM_BUILD_ROOT"
-install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Network/Communications
+%{__make} install \
+	PREFIX="%{_prefix}" \
+	DESTDIR="$RPM_BUILD_ROOT"
+
+install %{SOURCE1} $RPM_BUILD_ROOT%{_desktopdir}
 install %{SOURCE2} $RPM_BUILD_ROOT%{_pixmapsdir}
 
 rm -rf $RPM_BUILD_ROOT%{_docdir}
@@ -77,5 +80,5 @@ rm -rf $RPM_BUILD_ROOT
 %doc ChangeLog AUTHORS README.html examples
 %attr(755,root,root) %{_bindir}/*
 %{_datadir}/%{name}
-%{_applnkdir}/Network/Communications/*.desktop
+%{_desktopdir}/*
 %{_pixmapsdir}/*
