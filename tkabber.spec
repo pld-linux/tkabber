@@ -2,7 +2,7 @@ Summary:	Tk Jabber client
 Summary(pl):	Klient Jabbera oparty o Tk
 Name:		tkabber
 Version:	0.9.7
-Release:	2
+Release:	3
 License:	GPL
 Group:		Applications/Communications
 Source0:	http://www.jabberstudio.org/projects/tkabber/releases/file/%{name}-%{version}.tar.gz
