@@ -21,7 +21,7 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 Tkabber provides a Tcl/Tk interface to the Jabber instant messaging
-and presence service. 
+and presence service.
 
 Although relatively new software, Tkabber is fully-featured. Its
 features include:
