@@ -7,6 +7,7 @@ License:	GPL
 Group:		Applications/Communications
 Source0:	http://www.jabber.ru/projects/tkabber/tkabber-0.9beta/%{name}-%{version}.tar.gz
 URL:		http://www.jabber.ru/projects/tkabber/index_en.html
+Requires:	tcl >= 8.3.4-7
 Requires:	tk >= 8.3.3
 Requires:	tcllib >= 1.2
 Requires:	BWidget >= 1.3
