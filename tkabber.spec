@@ -2,7 +2,7 @@ Summary:	Tk Jabber client
 Summary(pl):	Klient Jabbera oparty o Tk
 Name:		tkabber
 Version:	0.9.7
-Release:	1
+Release:	2
 License:	GPL
 Group:		Applications/Communications
 Source0:	http://www.jabberstudio.org/projects/tkabber/releases/file/%{name}-%{version}.tar.gz
@@ -13,6 +13,8 @@ Icon:		tkabber.xpm
 URL:		http://tkabber.jabber.ru/
 Requires:	tcl >= 8.3.4-7
 Requires:	tcllib >= 1.2
+Requires:	tclsasl
+Requires:	tcl-tls >= 1.4.1
 Requires:	tk >= 8.3.3
 Requires:	tk-BWidget >= 1.3
 BuildArch:	noarch
@@ -33,7 +35,6 @@ and many, many more.
 
 You may need additional packages for full funcionality:
 - tk-Img, for more image file formats support
-- tcl-tls, for encrypted connections to server
 - tclgpgme, for end-to-end message encryption and signing
 - tkXwin, for auto-away
 
