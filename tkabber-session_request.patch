@@ -1,0 +1,12 @@
+diff -durN tkabber-0.9.5beta.orig/jabberlib-tclxml/jabberlib.tcl tkabber-0.9.5beta/jabberlib-tclxml/jabberlib.tcl
+--- tkabber-0.9.5beta.orig/jabberlib-tclxml/jabberlib.tcl	Mon Jun  9 08:45:06 2003
++++ tkabber-0.9.5beta/jabberlib-tclxml/jabberlib.tcl	Tue Sep 16 12:44:51 2003
+@@ -978,7 +978,7 @@
+ 			"version='1.0'>"]
+ 
+ 	    set ns_session urn:ietf:params:xml:ns:xmpp-session
+-	    set data [wrapper:createtag query \
++	    set data [wrapper:createtag session \
+ 			  -vars [list xmlns $ns_session]]
+ 
+ 	    send_iq set $data \
