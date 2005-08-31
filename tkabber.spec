@@ -11,6 +11,7 @@ Source1:	%{name}.desktop
 Source2:	%{name}.png
 Icon:		tkabber.xpm
 URL:		http://tkabber.jabber.ru/
+BuildRequires:	sed >= 4.0
 Requires:	tcl >= 8.3.4-7
 Requires:	tcllib >= 1.2
 Requires:	tclsasl
