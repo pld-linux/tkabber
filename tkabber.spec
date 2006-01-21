@@ -9,7 +9,6 @@ Source0:	http://files.jabberstudio.org/%{name}/%{name}-%{version}.tar.gz
 # Source0-md5:	2112b44822e4ea7d9292fddc93a89fd1
 Source1:	%{name}.desktop
 Source2:	%{name}.png
-Icon:		tkabber.xpm
 URL:		http://tkabber.jabber.ru/
 BuildRequires:	sed >= 4.0
 Requires:	tcl >= 8.3.4-7
