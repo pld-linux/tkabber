@@ -1,3 +1,5 @@
+%bcond_with	privacy	# more privacy
+#
 Summary:	Tk Jabber client
 Summary(pl):	Klient Jabbera oparty o Tk
 Name:		tkabber
@@ -9,6 +11,7 @@ Source0:	http://files.jabberstudio.org/%{name}/%{name}-%{version}.tar.gz
 # Source0-md5:	2112b44822e4ea7d9292fddc93a89fd1
 Source1:	%{name}.desktop
 Source2:	%{name}.png
+Patch0:		%{name}-privacy.patch
 URL:		http://tkabber.jabber.ru/
 BuildRequires:	sed >= 4.0
 Requires:	tcl >= 8.3.4-7
@@ -57,6 +60,8 @@ Do pe³nej funkcjonalno¶ci mog± byæ potrzebne dodatkowe pakiety:
 
 %prep
 %setup -q
+%{?with_privacy:%patch0 -p1}
+
 sed -i -e 's#ifaceck##g' Makefile
 
 %install
