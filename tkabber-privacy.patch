@@ -1,0 +1,11 @@
+diff -urN tkabber-0.9.8.org/plugins/chat/events.tcl tkabber-0.9.8/plugins/chat/events.tcl
+--- tkabber-0.9.8.org/plugins/chat/events.tcl	2005-03-12 23:03:04.000000000 +0100
++++ tkabber-0.9.8/plugins/chat/events.tcl	2006-04-08 18:04:48.798178250 +0200
+@@ -48,7 +48,6 @@
+ 	    offline   {set offline 1}
+ 	    delivered {set delivered 1}
+ 	    displayed {set displayed 1}
+-	    composing {set composing 1}
+ 	    id        {set id        1}
+ 	}
+     }
