@@ -1,4 +1,6 @@
-%bcond_with	privacy	# more privacy
+#
+# Conditional build:
+%bcond_with	privacy		# more privacy
 #
 Summary:	Tk Jabber client
 Summary(pl):	Klient Jabbera oparty o Tk
@@ -15,9 +17,9 @@ Patch0:		%{name}-privacy.patch
 URL:		http://tkabber.jabber.ru/
 BuildRequires:	sed >= 4.0
 Requires:	tcl >= 8.3.4-7
+Requires:	tcl-tls >= 1.4.1
 Requires:	tcllib >= 1.2
 Requires:	tclsasl
-Requires:	tcl-tls >= 1.4.1
 Requires:	tk >= 8.3.3
 Requires:	tk-BWidget >= 1.3
 BuildArch:	noarch
