@@ -3,7 +3,7 @@
 %bcond_with	privacy		# more privacy
 #
 Summary:	Tk Jabber client
-Summary(pl.UTF-8):   Klient Jabbera oparty o Tk
+Summary(pl.UTF-8):	Klient Jabbera oparty o Tk
 Name:		tkabber
 Version:	0.9.9
 Release:	1
