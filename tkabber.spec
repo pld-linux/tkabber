@@ -3,7 +3,7 @@
 %bcond_with	privacy		# more privacy
 #
 Summary:	Tk Jabber client
-Summary(pl):	Klient Jabbera oparty o Tk
+Summary(pl.UTF-8):   Klient Jabbera oparty o Tk
 Name:		tkabber
 Version:	0.9.9
 Release:	1
@@ -43,21 +43,21 @@ You may need additional packages for full funcionality:
 - tclgpgme, for end-to-end message encryption and signing
 - tkXwin, for auto-away
 
-%description -l pl
-Tkabber udostêpnia interfejs Tcl/Tk dla komunikatora Jabber.
+%description -l pl.UTF-8
+Tkabber udostÄ™pnia interfejs Tcl/Tk dla komunikatora Jabber.
 
-Mimo ¿e jest to dosyæ nowy program, Tkabber ma du¿e mo¿liwo¶ci,
-obejmuj±ce:
+Mimo Å¼e jest to dosyÄ‡ nowy program, Tkabber ma duÅ¼e moÅ¼liwoÅ›ci,
+obejmujÄ…ce:
 - emotikony,
-- przesy³anie plików,
+- przesyÅ‚anie plikÃ³w,
 - wcielenia,
-- przegl±danie
-i wiele, wiele wiêcej.
+- przeglÄ…danie
+i wiele, wiele wiÄ™cej.
 
-Do pe³nej funkcjonalno¶ci mog± byæ potrzebne dodatkowe pakiety:
-- tk-Img do obs³ugi wiêkszej liczby formatów plików,
-- tcl-tls do szyfrowanych po³±czeñ z serwerem,
-- tclgpgme do podpisywania i szyfrowania wiadomo¶ci,
+Do peÅ‚nej funkcjonalnoÅ›ci mogÄ… byÄ‡ potrzebne dodatkowe pakiety:
+- tk-Img do obsÅ‚ugi wiÄ™kszej liczby formatÃ³w plikÃ³w,
+- tcl-tls do szyfrowanych poÅ‚Ä…czeÅ„ z serwerem,
+- tclgpgme do podpisywania i szyfrowania wiadomoÅ›ci,
 - tkXwin do auto-away.
 
 %prep
