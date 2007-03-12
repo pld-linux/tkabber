@@ -5,13 +5,13 @@
 Summary:	Tk Jabber client
 Summary(pl.UTF-8):	Klient Jabbera oparty o Tk
 Name:		tkabber
-%define	snap	beta
+%define	snap	beta2
 Version:	0.10.0
 Release:	0.%{snap}.1
 License:	GPL
 Group:		Applications/Communications
-Source0:	http://tkabber.jabber.ru/files/download/%{name}-%{version}-%{snap}.tar.gz
-# Source0-md5:	51f36385830b6678163e87e52ebcaea9
+Source0:	http://files.jabber.ru/tkabber/%{name}-%{version}-%{snap}.tar.gz
+# Source0-md5:	b08033cc2aa38337d835df532f637f45
 Source1:	%{name}.desktop
 Source2:	%{name}.png
 Patch0:		%{name}-privacy.patch
