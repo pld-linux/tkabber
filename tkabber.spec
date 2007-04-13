@@ -5,13 +5,12 @@
 Summary:	Tk Jabber client
 Summary(pl.UTF-8):	Klient Jabbera oparty o Tk
 Name:		tkabber
-%define	snap	beta2
 Version:	0.10.0
-Release:	0.%{snap}.1
+Release:	1
 License:	GPL
 Group:		Applications/Communications
-Source0:	http://files.jabber.ru/tkabber/%{name}-%{version}-%{snap}.tar.gz
-# Source0-md5:	b08033cc2aa38337d835df532f637f45
+Source0:	http://files.jabber.ru/tkabber/%{name}-%{version}.tar.gz
+# Source0-md5:	f14c77d2d0cf30bc3a7ca298688f847e
 Source1:	%{name}.desktop
 Source2:	%{name}.png
 Patch0:		%{name}-privacy.patch
@@ -62,7 +61,7 @@ Do pełnej funkcjonalności mogą być potrzebne dodatkowe pakiety:
 - tkXwin do auto-away.
 
 %prep
-%setup -q -n %{name}-%{version}-%{snap}
+%setup -q
 %{?with_privacy:%patch0 -p1}
 
 sed -i -e 's#ifaceck##g' Makefile
