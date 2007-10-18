@@ -5,18 +5,19 @@
 Summary:	Tk Jabber client
 Summary(pl.UTF-8):	Klient Jabbera oparty o Tk
 Name:		tkabber
-Version:	0.10.0
-Release:	1
+Version:	0.10.1
+Release:	0.1
 License:	GPL
 Group:		Applications/Communications
-Source0:	http://files.jabber.ru/tkabber/%{name}-%{version}.tar.gz
-# Source0-md5:	f14c77d2d0cf30bc3a7ca298688f847e
+Source0:	http://files.jabber.ru/tkabber/%{name}-%{version}-beta.tar.gz
+# Source0-md5:	b21e86e674473db2fe97e659ae72008a
 Source1:	%{name}.desktop
 Source2:	%{name}.png
 Patch0:		%{name}-privacy.patch
 URL:		http://tkabber.jabber.ru/
 BuildRequires:	sed >= 4.0
 Requires:	tcl >= 8.3.4-7
+Requires:	tcl-tdom >= 0.8.2
 Requires:	tcl-tls >= 1.4.1
 Requires:	tcllib >= 1.2
 Requires:	tclsasl
@@ -61,7 +62,7 @@ Do pełnej funkcjonalności mogą być potrzebne dodatkowe pakiety:
 - tkXwin do auto-away.
 
 %prep
-%setup -q
+%setup -q -n %{name}-%{version}-beta
 %{?with_privacy:%patch0 -p1}
 
 sed -i -e 's#ifaceck##g' Makefile
