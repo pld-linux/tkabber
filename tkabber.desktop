@@ -1,9 +1,8 @@
 [Desktop Entry]
-Encoding=UTF-8
 Name=Tkabber
 Comment=Tk Jabber client
 Comment[pl]=Klient Jabbera w Tk
-Icon=tkabber.png
+Icon=tkabber
 Exec=tkabber
 Terminal=false
 Type=Application
