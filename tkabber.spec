@@ -18,11 +18,12 @@ URL:		http://tkabber.jabber.ru/
 BuildRequires:	sed >= 4.0
 Requires:	tcl >= 8.3.4-7
 Requires:	tcl-tdom >= 0.8.2
-Requires:	tcl-tls >= 1.4.1
 Requires:	tcllib >= 1.2
 Requires:	tclsasl
 Requires:	tk >= 8.3.3
 Requires:	tk-BWidget >= 1.3
+Suggests:	tcl-tls >= 1.4.1
+Suggests:	tcl-udp
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
