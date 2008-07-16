@@ -1,11 +1,14 @@
-diff -urN tkabber-0.9.8.org/plugins/chat/events.tcl tkabber-0.9.8/plugins/chat/events.tcl
---- tkabber-0.9.8.org/plugins/chat/events.tcl	2005-03-12 23:03:04.000000000 +0100
-+++ tkabber-0.9.8/plugins/chat/events.tcl	2006-04-08 18:04:48.798178250 +0200
-@@ -48,7 +48,6 @@
+diff -ur tkabber-0.11.0.org/plugins/chat/events.tcl tkabber-0.11.0/plugins/chat/events.tcl
+--- tkabber-0.11.0.org/plugins/chat/events.tcl	2008-05-12 10:24:02.000000000 +0200
++++ tkabber-0.11.0/plugins/chat/events.tcl	2008-07-16 18:06:15.622856194 +0200
+@@ -58,8 +58,7 @@
+ 	switch -- $tag1 {
  	    offline   {set offline 1}
  	    delivered {set delivered 1}
- 	    displayed {set displayed 1}
+-	    displayed {set displayed 1}
 -	    composing {set composing 1}
++	    displayed {set delivered 1}
  	    id        {set id        1}
  	}
      }
+
