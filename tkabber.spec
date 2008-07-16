@@ -1,12 +1,12 @@
 #
 # Conditional build:
-%bcond_with	privacy		# more privacy
+%bcond_without	privacy		# more privacy
 #
 Summary:	Tk Jabber client
 Summary(pl.UTF-8):	Klient Jabbera oparty o Tk
 Name:		tkabber
 Version:	0.11.0
-Release:	1%{?with_privacy:.privacy}
+Release:	2%{?with_privacy:.privacy}
 License:	GPL
 Group:		Applications/Communications
 Source0:	http://files.jabber.ru/tkabber/%{name}-%{version}.tar.gz
