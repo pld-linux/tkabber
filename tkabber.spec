@@ -1,13 +1,13 @@
 #
 # Conditional build:
-%bcond_without	privacy		# more privacy
+%bcond_with	privacy		# more privacy
 #
 %define	snap	20130614
 Summary:	Tk Jabber client
 Summary(pl.UTF-8):	Klient Jabbera oparty o Tk
 Name:		tkabber
 Version:	0.11.2
-Release:	1%{?with_privacy:.privacy}
+Release:	1.%{snap}.1
 License:	GPL
 Group:		Applications/Communications
 # Source0:	http://files.jabber.ru/tkabber/%{name}-%{version}.tar.gz
