@@ -2,15 +2,17 @@
 # Conditional build:
 %bcond_without	privacy		# more privacy
 #
+%define	snap	20130614
 Summary:	Tk Jabber client
 Summary(pl.UTF-8):	Klient Jabbera oparty o Tk
 Name:		tkabber
-Version:	0.11.1
+Version:	0.11.2
 Release:	1%{?with_privacy:.privacy}
 License:	GPL
 Group:		Applications/Communications
-Source0:	http://files.jabber.ru/tkabber/%{name}-%{version}.tar.gz
-# Source0-md5:	718db4876e7efbf44867c845cf2a35a0
+# Source0:	http://files.jabber.ru/tkabber/%{name}-%{version}.tar.gz
+Source0:	%{name}-%{snap}.tar.bz2
+# Source0-md5:	04816ea6663000588dd9e3f253d4a751
 Source1:	%{name}.desktop
 Source2:	%{name}.png
 Patch0:		%{name}-privacy.patch
@@ -53,8 +55,7 @@ obejmujące:
 - emotikony,
 - przesyłanie plików,
 - wcielenia,
-- przeglądanie
-i wiele, wiele więcej.
+- przeglądanie i wiele, wiele więcej.
 
 Do pełnej funkcjonalności mogą być potrzebne dodatkowe pakiety:
 - tk-Img do obsługi większej liczby formatów plików,
@@ -63,7 +64,7 @@ Do pełnej funkcjonalności mogą być potrzebne dodatkowe pakiety:
 - tkXwin do auto-away.
 
 %prep
-%setup -q
+%setup -q -n %{name}
 %{?with_privacy:%patch0 -p1}
 
 sed -i -e 's#ifaceck##g' Makefile
@@ -88,6 +89,12 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc ChangeLog AUTHORS README examples
 %attr(755,root,root) %{_bindir}/*
-%{_datadir}/%{name}
+%dir %{_datadir}/%{name}
+%{_datadir}/%{name}/[^t]*
+%attr(755,root,root) %{_datadir}/%{name}/tkabber.tcl
+%{_datadir}/%{name}/tclxmpp
+%{_datadir}/%{name}/tkabber-remote.tcl
+%{_datadir}/%{name}/trans
+%{_datadir}/%{name}/trans.tcl
 %{_desktopdir}/*.desktop
 %{_pixmapsdir}/*
