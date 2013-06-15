@@ -1,0 +1,11 @@
+--- tkabber/tclxmpp/xmpp/xmpp.tcl~	2011-12-14 21:42:06.000000000 +0100
++++ tkabber/tclxmpp/xmpp/xmpp.tcl	2013-06-15 08:48:42.829876795 +0200
+@@ -1258,7 +1258,7 @@
+     xml::split $xmlElement tag xmlns attrs cdata subels
+ 
+     set from   ""
+-    set type   ""
++    set type   "chat"
+     set x      {}
+     set params {}
+     set xparam {}
