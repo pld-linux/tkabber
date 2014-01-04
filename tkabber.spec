@@ -2,28 +2,26 @@
 # Conditional build:
 %bcond_without	privacy		# more privacy
 #
-%define	snap	20131123
 Summary:	Tk Jabber client
 Summary(pl.UTF-8):	Klient Jabbera oparty o Tk
 Name:		tkabber
-Version:	0.11.2
-Release:	1.%{snap}.1
+Version:	1.0
+Release:	1
 License:	GPL
 Group:		Applications/Communications
-# Source0:	http://files.jabber.ru/tkabber/%{name}-%{version}.tar.gz
-Source0:	%{name}-%{snap}.tar.bz2
-# Source0-md5:	aa8eaa6a414e538e0c8b81dd0256c5fc
+Source0:	http://files.jabber.ru/tkabber/tkabber-1.0.tar.xz
+# Source0-md5:	c82f0b93e1f221b1a91aa87d75cd7d0a
 Source1:	%{name}.desktop
 Source2:	%{name}.png
 Patch0:		%{name}-privacy.patch
 Patch1:		%{name}-chat-by-default.patch
 URL:		http://tkabber.jabber.ru/
 BuildRequires:	sed >= 4.0
-Requires:	tcl >= 8.3.4-7
+Requires:	tcl >= 8.4.0
 Requires:	tcl-tdom >= 0.8.2
 Requires:	tcllib >= 1.2
 Requires:	tclsasl
-Requires:	tk >= 8.3.3
+Requires:	tk >= 8.4.0
 Requires:	tk-BWidget >= 1.3
 Suggests:	tcl-tls >= 1.4.1
 Suggests:	tcl-udp
@@ -65,7 +63,7 @@ Do pełnej funkcjonalności mogą być potrzebne dodatkowe pakiety:
 - tkXwin do auto-away.
 
 %prep
-%setup -q -n %{name}
+%setup -q
 %{?with_privacy:%patch0 -p1}
 %patch1 -p1
 
