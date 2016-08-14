@@ -1,0 +1,11 @@
+--- tkabber-1.1.2/login.tcl~	2015-05-10 21:19:50.000000000 +0200
++++ tkabber-1.1.2/login.tcl	2016-08-14 16:12:23.307296050 +0200
+@@ -110,7 +110,7 @@ if {$use_tls} {
+     custom::defvar loginconf(sslcertfile) "" \
+ 	[::msgcat::mc "SSL certificate file (optional)."] \
+ 	-group Login -type file
+-    custom::defvar loginconf(sslcacertstore) "" \
++    custom::defvar loginconf(sslcacertstore) "/etc/certs/ca-certificates.crt" \
+ 	[::msgcat::mc "SSL certification authority file or directory (optional)."] \
+ 	-group Login -type file
+     custom::defvar loginconf(sslkeyfile) "" \
